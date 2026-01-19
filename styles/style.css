@@ -130,10 +130,10 @@ header{
     flex-direction: column;
     gap: 24px;
 }
-.banner-text-box p{
-}
 .banner .brand-text{
     font-size: 60px;
+    line-height: 35px;
+    margin-top: 40px;
 }
 .btn-box{
     justify-content: center;
