@@ -10,7 +10,6 @@ body{
     background-color: var(--color-darkbg);
     margin: 0;
     padding: 0;
-    font-size: 16px;
     max-width: 1600px;
 }
 .inter-font{
@@ -26,6 +25,8 @@ body{
     --color-green: #00ff88;
     --color-gray: #412567;
     --color-darkbg: #1A0B2E;
+    --color-darkbg2: #230E3D;
+    --color-darkbg3: #35116570;
 
 }
 .flex{
@@ -169,13 +170,9 @@ header{
     gap: 16px;
     padding: 50px 200px;
 }
-.about-text .section-heading{
+.section-heading{
     font-size: 48px;
-
-}
-.about-text p{
-    line-height: 30px;
-    color: var(--color-dim)
+    text-align: center;
 }
 hr{
     margin: 80px 0;
@@ -203,3 +200,80 @@ hr{
     color: var(--color-dim);
 }
 
+/* Choice */
+.choice{
+    width: 100%;
+    padding: 120px 200px;
+    background-color: var(--color-darkbg2);
+}
+.cards-box{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 30px;
+    grid-template-areas:
+    "long wide wide"
+    "long wide2 wide2"
+    "wide3 wide3 norm";
+}
+.long{
+    grid-area: long;
+}
+.wide{
+    grid-area: wide;
+}
+.wide2{
+    grid-area: wide2;
+}
+.wide3{
+    grid-area: wide3;
+}
+.normal{
+    grid-area: norm;
+}
+.card{
+    background-color: var(--color-darkbg3);
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+.card img{
+    width: fit-content;
+    height: auto;
+}
+.card-heading{
+    font-size: 24px;
+}
+.card-detail{
+    color: var(--color-dim);
+    line-height: 24px;
+}
+
+/* feature */
+.feature{
+    padding: 120px 200px;
+}
+.iframe-box{
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+.video-card{
+    width: 380px;
+    height: fit-content;
+    background-color: var(--color-darkbg3);
+    border-radius: 40px;
+}
+.video-card iframe{
+    border-radius: 40px 40px 0 0;
+}
+.video-card-text{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
