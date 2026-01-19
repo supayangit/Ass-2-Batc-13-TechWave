@@ -1,9 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+}
 body{
     background-color: #1A0B2E;
-    margin:0;
+    margin: 0;
     padding: 0;
     font-size: 16px;
     max-width: 1600px;
@@ -15,40 +19,43 @@ body{
   font-style: normal;
 }
 :root{
-    --grad-btn: linear-gradient(to top right, #f7e043, #f709b7, #8f10ec); 
-    --grad-text: linear-gradient(to top right,  #f7e043, #f709b7, #8f10ec);
+    --grad: linear-gradient(to top right,  #f7e043, #f709b7, #8f10ec);
     --color-text: #ffffff;
+
+}
+.flex{
+    display: flex;
 }
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 200px;
+    padding: 16px 200px;
+    border-bottom: 1px solid #412567;
+    box-sizing: border-box;
 }
 .brand-text{
     color: var(--color-text);
     font-size: 44px;
-    line-height: 0%;
 }
 .text-color{
-   background: var(--grad-text);
+   background: var(--grad);
    -webkit-background-clip: text;
    background-clip: text;
    -webkit-text-fill-color: transparent;
 }
 
 .btn-primary{
-    background: var(--grad-btn);
+    background: var(--grad);
     padding: 12px 16px;
     border-radius: 1000px;
-    color: white;
+    color: var(--color-text);
     border: none;
     font-weight: 600;
     cursor: pointer;
 }
 
 .nav-box{
-    display: flex;
     gap: 32px;
     list-style-type: none;
 }
@@ -56,4 +63,94 @@ header{
     text-decoration: none;
     color: var(--color-text);
     font-weight: 500;
+}
+
+/* banner */
+.banner {
+    text-align: center;
+    background-image: url(../assets/hero-bg.png);
+    width: 100%;
+    height: 760px;
+    background-repeat: no-repeat;      
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-img-box {
+    position: relative;      
+    height: 350px; 
+    width: 350px;         
+    display: block;         
+    margin-bottom: 40px;  
+}
+.banner-img-box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    height: auto;
+}
+
+.banner-img-box img:first-child{
+    width: 100%;
+}
+.banner-img-box img:last-child{
+    width: 100%;
+    z-index: 2;
+}
+.badge-new {
+    position: absolute;
+    top: 10%;
+    right: 12%;
+    z-index: 5;
+    padding: 6px 14px;
+    color: #0b1a14;
+    background: linear-gradient(135deg, #00ffb3, #00d18f);
+    border-radius: 999px;
+    box-shadow: 1 6px 18px rgba(0, 255, 179, 0.35);
+}
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    80% {transform: scale(1.25);}
+    100% {transform: scale(1);}
+}
+.badge-new{
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.banner-text-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.banner-text-box p{
+}
+.banner .brand-text{
+    font-size: 60px;
+}
+.btn-box{
+    justify-content: center;
+    justify-items: center;
+    gap: 8px;
+}
+.banner .btn-primary{
+    padding: 12px 20px;
+}
+.btn-secondary{
+    border: #00FF88 solid 1px;
+    border-radius: 1000px;
+    color: #00FF88;
+    background-color: transparent;
+    font-weight: 500;
+    padding: 12px 20px;
+}
+.btn-secondary i{
+    color: #00FF88;
 }
