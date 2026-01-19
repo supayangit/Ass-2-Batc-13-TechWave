@@ -6,7 +6,7 @@
     color: var(--color-text);
 }
 body{
-    background-color: #1A0B2E;
+    background-color: var(--color-darkbg);
     margin: 0;
     padding: 0;
     font-size: 16px;
@@ -20,7 +20,11 @@ body{
 }
 :root{
     --grad: linear-gradient(to top right,  #f7e043, #f709b7, #8f10ec);
-    --color-text: #ffffff;
+    --color-text: rgb(255 255 255);
+    --color-dim: rgb(255 255 255 / 80%);
+    --color-green: #00ff88;
+    --color-gray: #412567;
+    --color-darkbg: #1A0B2E;
 
 }
 .flex{
@@ -31,7 +35,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 16px 200px;
-    border-bottom: 1px solid #412567;
+    border-bottom: 1px solid var(--color-gray);
     box-sizing: border-box;
 }
 .brand-text{
@@ -109,8 +113,8 @@ header{
     right: 12%;
     z-index: 5;
     padding: 6px 14px;
-    color: #0b1a14;
-    background: linear-gradient(135deg, #00ffb3, #00d18f);
+    color: var(--color-darkbg);
+    background: linear-gradient(135deg, var(--color-green), #00d18f);
     border-radius: 999px;
     box-shadow: 1 6px 18px rgba(0, 255, 179, 0.35);
 }
@@ -144,13 +148,53 @@ header{
     padding: 12px 20px;
 }
 .btn-secondary{
-    border: #00FF88 solid 1px;
+    border: var(--color-green) solid 1px;
     border-radius: 1000px;
-    color: #00FF88;
     background-color: transparent;
     font-weight: 500;
     padding: 12px 20px;
 }
-.btn-secondary i{
-    color: #00FF88;
+
+/* ABOUT */
+.about{
+}
+.about-text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 50px 400px;
+}
+.about-text .section-heading{
+    font-size: 48px;
+
+}
+.about-text p{
+    line-height: 30px;
+    color: var(--color-dim)
+}
+hr{
+    margin: 80px 0;
+    border: 1px solid var(--color-gray);
+}
+.about-stat{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 0 200px 120px;
+}
+.stat-info{
+    text-align: center;
+}
+.stat-count{
+    font-size: 48px;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 16px;
+}
+.text-green{
+    color: var(--color-green);
+}
+.stat-sub{
+    color: var(--color-dim);
 }
