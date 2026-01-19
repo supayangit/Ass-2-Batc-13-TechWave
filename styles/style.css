@@ -261,9 +261,10 @@ hr{
     display: flex;
     gap: 30px;
     margin-top: 40px;
+    justify-content: center;
 }
 .video-card{
-    width: 380px;
+    max-width: 360px;
     height: fit-content;
     background-color: var(--color-darkbg3);
     border-radius: 40px;
@@ -276,4 +277,47 @@ hr{
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+/* host */
+.host{
+    padding: 0 200px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+.host-info{
+    background-color: var(--color-darkbg3);
+    border-radius: 40px;
+    padding: 40px;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    gap: 24px;
+}
+.host-name{
+    font-size: 32px;
+}
+.host-data{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+.host-links{
+    display: flex;
+    gap: 8px;
+}
+.host-links a{
+    border: 2px solid #533C72;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    text-decoration: none;
+
+}.host-links a img{
+    object-fit: contain;
+
 }
